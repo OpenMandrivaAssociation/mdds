@@ -1,22 +1,20 @@
 %global do_mem_tests 0
 %global do_perf_tests 0
 
-Name:		mdds
-Version:	0.5.3
-Release:	1
 Summary:	A collection of multi-dimensional data structures and indexing algorithms
+Name:		mdds
+Version:	0.8.1
+Release:	1
 Group:		Development/C++
 License:	MIT
-URL:		http://code.google.com/p/multidimalgorithm/
+Url:		http://code.google.com/p/multidimalgorithm/
 Source0:	http://multidimalgorithm.googlecode.com/files/%{name}_%{version}.tar.bz2
+BuildArch:	noarch
 
 BuildRequires:	boost-devel
 %if %{do_mem_tests}
 BuildRequires:	valgrind
 %endif
-
-BuildArch:	noarch
-
 
 %description
 A collection of multi-dimensional data structures and indexing algorithms.
@@ -37,7 +35,7 @@ Requires:	boost-devel
 Headers for %{name}.
 
 %prep
-%setup -q -n %{name}_%{version}
+%setup -qn %{name}_%{version}
 # this is only used in tests
 sed -i -e '/^CPPFLAGS/s/-Wall.*-std/%{optflags} -std/' Makefile.in
 
