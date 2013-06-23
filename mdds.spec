@@ -3,7 +3,7 @@
 
 Summary:	A collection of multi-dimensional data structures and indexing algorithms
 Name:		mdds
-Version:	0.6.1
+Version:	0.8.1
 Release:	1
 Group:		Development/C++
 License:	MIT
@@ -45,10 +45,10 @@ sed -i -e '/^CPPFLAGS/s/-Wall.*-std/%{optflags} -std/' Makefile.in
 
 %install
 mkdir -p %{buildroot}/%{_includedir}
-#mkdir -p %{buildroot}/%{_datadir}/pkgconfig
+mkdir -p %{buildroot}/%{_datadir}/pkgconfig
 mkdir %{buildroot}/%{_includedir}/mdds
 cp -pr include/mdds/* %{buildroot}/%{_includedir}/mdds
-#cp misc/mdds.pc %{buildroot}/%{_datadir}/pkgconfig
+cp misc/mdds.pc %{buildroot}/%{_datadir}/pkgconfig
 
 %check
 for t in fst pqt recset st; do
@@ -69,5 +69,5 @@ done
 %files devel
 %doc AUTHORS NEWS README
 %{_includedir}/mdds
-#{_datadir}/pkgconfig/mdds.pc
+%{_datadir}/pkgconfig/mdds.pc
 
