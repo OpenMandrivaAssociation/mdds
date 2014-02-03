@@ -3,12 +3,12 @@
 
 Summary:	A collection of multi-dimensional data structures and indexing algorithms
 Name:		mdds
-Version:	0.8.1
-Release:	5
+Version:	0.10.1
+Release:	1
 Group:		Development/C++
 License:	MIT
 Url:		http://code.google.com/p/multidimalgorithm/
-Source0:	http://multidimalgorithm.googlecode.com/files/%{name}_%{version}.tar.bz2
+Source0:	http://kohei.us/files/%{name}/src/%{name}_%{version}.tar.bz2
 BuildArch:	noarch
 
 BuildRequires:	boost-devel
@@ -37,7 +37,7 @@ Headers for %{name}.
 %prep
 %setup -qn %{name}_%{version}
 # this is only used in tests
-sed -i -e '/^CPPFLAGS/s/-Wall.*-std/%{optflags} -std/' Makefile.in
+sed -i -e '/^CPPFLAGS/s/-Wall -Os/-Wall %{optflags}/' Makefile* configure*
 
 %build
 %configure2_5x
