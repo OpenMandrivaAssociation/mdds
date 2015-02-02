@@ -3,8 +3,8 @@
 
 Summary:	A collection of multi-dimensional data structures and indexing algorithms
 Name:		mdds
-Version:	0.10.3
-Release:	4
+Version:	0.11.2
+Release:	1
 Group:		Development/C++
 License:	MIT
 Url:		http://code.google.com/p/multidimalgorithm/
@@ -40,7 +40,7 @@ Headers for %{name}.
 sed -i -e '/^CPPFLAGS/s/-Wall -Os/-Wall %{optflags}/' Makefile* configure*
 
 %build
-%configure2_5x
+%configure
 %make
 
 %install
