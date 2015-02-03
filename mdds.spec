@@ -4,11 +4,12 @@
 Summary:	A collection of multi-dimensional data structures and indexing algorithms
 Name:		mdds
 Version:	0.11.2
-Release:	1
+Release:	2
 Group:		Development/C++
 License:	MIT
 Url:		http://code.google.com/p/multidimalgorithm/
 Source0:	http://kohei.us/files/%{name}/src/%{name}_%{version}.tar.bz2
+Patch0:		0001-algorithm-is-needed-unconditionally.patch
 BuildArch:	noarch
 
 BuildRequires:	boost-devel
@@ -36,6 +37,7 @@ Headers for %{name}.
 
 %prep
 %setup -qn %{name}_%{version}
+%apply_patches
 # this is only used in tests
 sed -i -e '/^CPPFLAGS/s/-Wall -Os/-Wall %{optflags}/' Makefile* configure*
 
