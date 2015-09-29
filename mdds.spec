@@ -3,13 +3,12 @@
 
 Summary:	A collection of multi-dimensional data structures and indexing algorithms
 Name:		mdds
-Version:	0.11.2
+Version:	0.12.1
 Release:	0.1
 Group:		Development/C++
 License:	MIT
-Url:		http://code.google.com/p/multidimalgorithm/
+Url:		http://gitlab.com/mdds/mdds/
 Source0:	http://kohei.us/files/%{name}/src/%{name}_%{version}.tar.bz2
-Patch0:		0001-algorithm-is-needed-unconditionally.patch
 BuildArch:	noarch
 
 BuildRequires:	boost-devel
