@@ -1,5 +1,6 @@
 %global do_mem_tests 0
 %global do_perf_tests 0
+%define api 1.0
 
 Summary:	A collection of multi-dimensional data structures and indexing algorithms
 Name:		mdds
@@ -45,11 +46,7 @@ sed -i -e '/^CPPFLAGS/s/-Wall -Os/-Wall %{optflags}/' Makefile* configure*
 %make
 
 %install
-mkdir -p %{buildroot}/%{_includedir}
-mkdir -p %{buildroot}/%{_datadir}/pkgconfig
-mkdir %{buildroot}/%{_includedir}/mdds
-cp -pr include/mdds/* %{buildroot}/%{_includedir}/mdds
-cp misc/mdds.pc %{buildroot}/%{_datadir}/pkgconfig
+%makeinstall_std
 
 %check
 for t in fst pqt recset st; do
@@ -69,6 +66,7 @@ done
 
 %files devel
 %doc AUTHORS CHANGELOG README.md
-%{_includedir}/mdds
-%{_datadir}/pkgconfig/mdds.pc
+%{_docdir}/mdds-%{api}
+%{_includedir}/mdds-%{api}
+%{_datadir}/pkgconfig/mdds-%{api}.pc
 
