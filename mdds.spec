@@ -4,12 +4,12 @@
 
 Summary:	A collection of multi-dimensional data structures and indexing algorithms
 Name:		mdds
-Version:	1.0.0
-Release:	2
+Version:	1.1.0
+Release:	1
 Group:		Development/C++
 License:	MIT
 Url:		http://gitlab.com/mdds/mdds/
-Source0:	http://kohei.us/files/%{name}/src/%{name}_%{version}.tar.bz2
+Source0:	http://kohei.us/files/%{name}/src/%{name}-%{version}.tar.bz2
 BuildArch:	noarch
 
 BuildRequires:	boost-devel
@@ -36,7 +36,7 @@ Requires:	boost-devel
 Headers for %{name}.
 
 %prep
-%setup -qn %{name}_%{version}
+%setup -q
 %apply_patches
 # this is only used in tests
 sed -i -e '/^CPPFLAGS/s/-Wall -Os/-Wall %{optflags}/' Makefile* configure*
@@ -49,20 +49,7 @@ sed -i -e '/^CPPFLAGS/s/-Wall -Os/-Wall %{optflags}/' Makefile* configure*
 %makeinstall_std
 
 %check
-for t in fst pqt recset st; do
-    make test.$t
-done
-%if %{do_perf_tests}
-    for t in recset st; do
-        make test.$t.perf
-    done
-    make test.stl
-%endif
-%if %{do_mem_tests}
-    for t in fst pqt recset st; do
-        make test.$t.mem
-    done
-%endif
+make check
 
 %files devel
 %doc AUTHORS CHANGELOG README.md
