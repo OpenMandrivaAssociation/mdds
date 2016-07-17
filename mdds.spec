@@ -1,10 +1,10 @@
 %global do_mem_tests 0
 %global do_perf_tests 0
-%define api 1.0
+%define api 1.2
 
 Summary:	A collection of multi-dimensional data structures and indexing algorithms
 Name:		mdds
-Version:	1.1.0
+Version:	1.2.1
 Release:	1
 Group:		Development/C++
 License:	MIT
