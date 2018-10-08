@@ -4,8 +4,8 @@
 
 Summary:	A collection of multi-dimensional data structures and indexing algorithms
 Name:		mdds
-Version:	1.3.1
-Release:	3
+Version:	1.4.2
+Release:	1
 Group:		Development/C++
 License:	MIT
 Url:		http://gitlab.com/mdds/mdds/
@@ -37,7 +37,7 @@ Requires:	boost-devel
 Headers for %{name}.
 
 %prep
-%setup -qn mdds-%{version}-8db40b310ff739f259c52764e4d8c63350ab334d
+%setup -qn mdds-%{version}-027fda6f929d9fef2209cfc16c09faa107d88ba7
 %apply_patches
 # this is only used in tests
 sed -i -e '/^CPPFLAGS/s/-Wall -Os/-Wall %{optflags}/' Makefile* configure*
@@ -57,4 +57,3 @@ make check
 %{_docdir}/mdds
 %{_includedir}/mdds-%{api}
 %{_datadir}/pkgconfig/mdds-%{api}.pc
-
