@@ -1,6 +1,6 @@
 %global do_mem_tests 0
 %global do_perf_tests 0
-%define api 1.2
+%define api 1.4
 
 Summary:	A collection of multi-dimensional data structures and indexing algorithms
 Name:		mdds
@@ -9,7 +9,7 @@ Release:	1
 Group:		Development/C++
 License:	MIT
 Url:		http://gitlab.com/mdds/mdds/
-Source0:	https://gitlab.com/mdds/mdds/repository/%{version}/archive.tar.bz2
+Source0:	http://kohei.us/files/mdds/src/%{name}-%{version}.tar.bz2
 Patch0:		mdds-c++17.patch
 BuildArch:	noarch
 
@@ -37,7 +37,7 @@ Requires:	boost-devel
 Headers for %{name}.
 
 %prep
-%setup -qn mdds-%{version}-027fda6f929d9fef2209cfc16c09faa107d88ba7
+%setup -q
 %apply_patches
 # this is only used in tests
 sed -i -e '/^CPPFLAGS/s/-Wall -Os/-Wall %{optflags}/' Makefile* configure*
