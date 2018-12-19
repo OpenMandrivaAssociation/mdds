@@ -4,8 +4,8 @@
 
 Summary:	A collection of multi-dimensional data structures and indexing algorithms
 Name:		mdds
-Version:	1.4.2
-Release:	2
+Version:	1.4.3
+Release:	1
 Group:		Development/C++
 License:	MIT
 Url:		http://gitlab.com/mdds/mdds/
@@ -43,6 +43,8 @@ Headers for %{name}.
 sed -i -e '/^CPPFLAGS/s/-Wall -Os/-Wall %{optflags}/' Makefile* configure*
 
 %build
+export CC=gcc
+export CXX=g++
 %configure
 %make
 
