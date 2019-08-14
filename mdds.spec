@@ -4,8 +4,10 @@
 
 Summary:	A collection of multi-dimensional data structures and indexing algorithms
 Name:		mdds
+# Please don't update to 1.5.x before applications using it
+# (libreoffice, calligra) have been updated to support it
 Version:	1.4.3
-Release:	3
+Release:	4
 Group:		Development/C++
 License:	MIT
 Url:		http://gitlab.com/mdds/mdds/
@@ -13,7 +15,7 @@ Source0:	http://kohei.us/files/mdds/src/%{name}-%{version}.tar.bz2
 Patch0:		mdds-c++17.patch
 BuildArch:	noarch
 
-BuildRequires:	boost-devel >= 1.70.0
+BuildRequires:	boost-devel >= 1.71.0
 %if %{do_mem_tests}
 BuildRequires:	valgrind
 %endif
