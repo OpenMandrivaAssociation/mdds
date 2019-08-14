@@ -45,8 +45,6 @@ Headers for %{name}.
 sed -i -e '/^CPPFLAGS/s/-Wall -Os/-Wall %{optflags}/' Makefile* configure*
 
 %build
-export CC=gcc
-export CXX=g++
 %configure
 %make
 
