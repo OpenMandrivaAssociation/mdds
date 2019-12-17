@@ -1,21 +1,20 @@
 %global do_mem_tests 0
 %global do_perf_tests 0
-%define api 1.4
+%global api %(echo %{version} |cut -d. -f1-2)
 
 Summary:	A collection of multi-dimensional data structures and indexing algorithms
 Name:		mdds
-# Please don't update to 1.5.x before applications using it
+# Please don't update to 1.6.x before applications using it
 # (libreoffice, calligra) have been updated to support it
-Version:	1.4.3
-Release:	4
+Version:	1.5.0
+Release:	1
 Group:		Development/C++
 License:	MIT
 Url:		http://gitlab.com/mdds/mdds/
 Source0:	http://kohei.us/files/mdds/src/%{name}-%{version}.tar.bz2
-Patch0:		mdds-c++17.patch
 BuildArch:	noarch
 
-BuildRequires:	boost-devel >= 1.71.0
+BuildRequires:	boost-devel >= 1.72.0
 %if %{do_mem_tests}
 BuildRequires:	valgrind
 %endif
