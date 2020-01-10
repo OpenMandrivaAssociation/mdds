@@ -39,7 +39,7 @@ Headers for %{name}.
 
 %prep
 %setup -q
-%apply_patches
+%autopatch -p1
 # this is only used in tests
 sed -i -e '/^CPPFLAGS/s/-Wall -Os/-Wall %{optflags}/' Makefile* configure*
 
