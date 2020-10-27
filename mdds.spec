@@ -1,13 +1,13 @@
 %global do_mem_tests 0
 %global do_perf_tests 0
-%global api %(echo %{version} |cut -d. -f1-2)
+%global api 1.5
 
 Summary:	A collection of multi-dimensional data structures and indexing algorithms
 Name:		mdds
 # Please don't update to 1.6.x before applications using it
 # (libreoffice, calligra) have been updated to support it
-Version:	1.5.0
-Release:	2
+Version:	1.7.0
+Release:	1
 Group:		Development/C++
 License:	MIT
 Url:		http://gitlab.com/mdds/mdds/
