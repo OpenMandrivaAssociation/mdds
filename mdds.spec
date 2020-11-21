@@ -7,7 +7,7 @@ Name:		mdds
 # Please don't update to 1.6.x before applications using it
 # (libreoffice, calligra) have been updated to support it
 Version:	1.7.0
-Release:	1
+Release:	2
 Group:		Development/C++
 License:	MIT
 Url:		http://gitlab.com/mdds/mdds/
