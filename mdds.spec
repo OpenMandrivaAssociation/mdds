@@ -1,11 +1,11 @@
 %global do_mem_tests 0
 %global do_perf_tests 0
-%global api 1.5
+%global api 2.0
 
 Summary:	A collection of multi-dimensional data structures and indexing algorithms
 Name:		mdds
-Version:	1.7.0
-Release:	3
+Version:	2.0.0
+Release:	1
 Group:		Development/C++
 License:	MIT
 Url:		http://gitlab.com/mdds/mdds/
@@ -40,13 +40,14 @@ Headers for %{name}.
 %autopatch -p1
 # this is only used in tests
 sed -i -e '/^CPPFLAGS/s/-Wall -Os/-Wall %{optflags}/' Makefile* configure*
+%configure \
+	--enable-openmp
 
 %build
-%configure
-%make
+%make_build
 
 %install
-%makeinstall_std
+%make_install
 
 %check
 make check
