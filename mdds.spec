@@ -5,7 +5,7 @@
 Summary:	A collection of multi-dimensional data structures and indexing algorithms
 Name:		mdds
 Version:	2.0.3
-Release:	3
+Release:	4
 Group:		Development/C++
 License:	MIT
 Url:		http://gitlab.com/mdds/mdds/
