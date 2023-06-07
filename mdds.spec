@@ -1,11 +1,11 @@
 %global do_mem_tests 0
 %global do_perf_tests 0
-%global api 2.0
+%global api 2.1
 
 Summary:	A collection of multi-dimensional data structures and indexing algorithms
 Name:		mdds
-Version:	2.0.3
-Release:	4
+Version:	2.1.1
+Release:	1
 Group:		Development/C++
 License:	MIT
 Url:		http://gitlab.com/mdds/mdds/
