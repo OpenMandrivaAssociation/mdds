@@ -8,7 +8,7 @@ Version:	2.1.1
 Release:	3
 Group:		Development/C++
 License:	MIT
-Url:		http://gitlab.com/mdds/mdds/
+Url:		https://gitlab.com/mdds/mdds/
 Source0:	http://kohei.us/files/mdds/src/%{name}-%{version}.tar.bz2
 BuildArch:	noarch
 
