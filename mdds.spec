@@ -1,6 +1,6 @@
 %global do_mem_tests 0
 %global do_perf_tests 0
-%global api 2.1
+%global api 3.1
 
 Summary:	A collection of multi-dimensional data structures and indexing algorithms
 Name:		mdds
