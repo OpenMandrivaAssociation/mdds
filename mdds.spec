@@ -9,7 +9,7 @@ Release:	1
 Group:		Development/C++
 License:	MIT
 Url:		https://gitlab.com/mdds/mdds/
-Source0:	http://kohei.us/files/mdds/src/%{name}-%{version}.tar.bz2
+Source0:	https://gitlab.com/mdds/mdds/-/archive/%{version}/mdds-%{version}.tar.bz2
 BuildArch:	noarch
 
 BuildRequires:	boost-devel >= 1.73.0
