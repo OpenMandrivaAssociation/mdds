@@ -1,6 +1,6 @@
 %global do_mem_tests 0
 %global do_perf_tests 0
-%global api 3.1
+%global api 2.1
 
 Summary:	A collection of multi-dimensional data structures and indexing algorithms
 Name:		mdds
@@ -55,5 +55,5 @@ make check
 %files devel
 %doc AUTHORS CHANGELOG README.md
 %{_docdir}/mdds
-%{_includedir}/mdds-%{api}
-%{_datadir}/pkgconfig/mdds-%{api}.pc
+#_includedir}/mdds-%{api}
+#{_datadir}/pkgconfig/mdds-%{api}.pc
