@@ -12,6 +12,11 @@ Url:		https://gitlab.com/mdds/mdds/
 Source0:	https://gitlab.com/mdds/mdds/-/archive/%{version}/mdds-%{version}.tar.bz2
 BuildArch:	noarch
 
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	boost-devel >= 1.73.0
 %if %{do_mem_tests}
 BuildRequires:	valgrind
